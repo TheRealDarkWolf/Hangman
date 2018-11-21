@@ -26,13 +26,26 @@ def hang():
 	turtle.speed(0)
 	if stage[0]==0:
 		go_to(-110,0,0)
+		turtle.speed(0)
 		turtle.forward(120)
 		turtle.right(90)
-		turtle.forward(25)
+		turtle.forward(30)
 		turtle.right(90)
 		turtle.forward(120)
 		turtle.right(90)
-		turtle.forward(25)
+		turtle.forward(30)
+		turtle.right(90)
+		cb = turtle.right
+		for i in range(0,5):
+			turtle.forward(120)
+			cb(90)
+			turtle.forward(5)
+			cb(90)
+			if cb is turtle.right:
+				cb = turtle.left
+			else:
+				cb = turtle.right
+		turtle.forward(120)
 		go_to(-100,0, 90)
 		turtle.forward(200)
 		turtle.right(90)
